@@ -16,7 +16,7 @@ body {
     line-height: 1.6;
 }
 .container {
-    width: 80%;
+    width: 80% !important;
     margin: auto;
 }
 /*************
@@ -107,7 +107,7 @@ destination
 .destination .fa-tags {
     position: absolute;
     right: 5%;
-    top: 20%;
+    top: 5%;
     background-color: var(--blue);
     color: var(--white);
     padding: 10px;
@@ -157,22 +157,35 @@ footer h3 {
 footer p {
     margin-bottom: 0px;
 }
+footer img {
+    margin-right: 5px;
+}
 footer ul li {
     list-style: none;
 }
 footer ul li a {
     color: var(--white);
 }
+footer ul li a:hover {
+    color: var(--white);
+}
 footer input {
     background-color: black;
     padding: 5px 0 5px 5px;
+    border: 1px solid var(--white);
+}
+footer input:hover {
+    border: 1px solid var(--blue);
+}
+footer input:focus {
+    outline: none;
 }
 footer .input {
-    position: relative;
+    position: absolute;
 }
 footer i {
-    position: absolute;
-    left: 75%;
+    position: relative;
+    left: -10%;
     top: 25%;
 }
 ::placeholder {
@@ -184,4 +197,59 @@ bottom line
 .bottom-line {
     background-color: var(--blue);
     color: var(--gray);
+}
+/*************
+RESPONSIVE
+*************/
+@media(max-width: 768px) {
+    .container {
+        width: 90% !important;
+    }
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-nav .btn {
+        width: 30%;
+        margin: auto;
+    }
+    .navbar-nav {
+        text-align: center;
+    }
+    header .text {
+        height: 70vh;
+        width: 90%;
+        margin: auto;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+    .carousel img {
+        height: 60vh;
+    }
+    .counter .col-3 {
+        flex: 0 0 23%;
+    }
+    .counter h4 {
+        font-size: 1.2rem;
+    }
+    .counter h5 {
+        font-size: .9rem;
+    }
+    .img-fluid {
+        margin-bottom: 40px;
+    }
+    footer h3 {
+        margin: 20px 0;
+    }
+    .col-10,
+    .col-7,
+    .col-5,
+    .col-4,
+    .col-3{
+        max-width: 100%;
+        flex: 0 0 100%;
+    }
+    .display-4 {
+        font-size: 2.5rem;
+    }
 }
